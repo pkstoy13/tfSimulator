@@ -1,0 +1,30 @@
+version: "3.9"
+
+services:
+  api:
+    build: ./api
+    container_name: tfsimulator-api
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/tfsimulator
+      SPRING_DATASOURCE_USERNAME: tfsim
+      SPRING_DATASOURCE_PASSWORD: tfsim
+    depends_on:
+      - db
+
+  db:
+    image: postgres:16
+    container_name: tfsimulator-db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: tfsimulator
+      POSTGRES_USER: tfsim
+      POSTGRES_PASSWORD: tfsim
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
