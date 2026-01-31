@@ -1,10 +1,10 @@
-package com.example.tfSimulator;
+package com.pksto.tfsimulator;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TfSimulatorApplicationTests {
+class TfsimulatorApplicationTests {
 
 	@Test
 	void contextLoads() {

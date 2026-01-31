@@ -1,16 +1,13 @@
-package com.example.tfSimulator;
+package com.pksto.tfsimulator;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TfSimulatorApplication {
+public class TfsimulatorApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TfSimulatorApplication.class, args);
-		System.out.println("Backend Running!");
-
-
+		SpringApplication.run(TfsimulatorApplication.class, args);
 	}
 
 }
